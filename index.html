@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户知情协议</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 15px;
+        }
+        #overlay {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: #000;
+            text-align: center;
+        }
+        #modal {
+            background: #fff;
+            padding: 3vw;
+            border-radius: 5vw;
+            box-shadow: 0 0 5vw rgba(0, 0, 0, 0.5);
+        }
+        #agreeBtn, #disagreeBtn {
+            padding: 1vw;
+            margin-top: 1vw;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="overlay">
+    <div id="modal">
+        <h2>用户须知</h2>
+        <p>非常感谢参与我们关于骨质疏松护理聊天机器人的研究，帮我们了解和改善聊天机器人以帮助患者更好的获取相关医疗健康信息。</p>
+        <p>在使用本聊天机器人进行交流之前，请您注意，您的聊天记录和登录数据等将会作为研究数据进行收集和分析。</p>
+        <p>我们郑重承诺，在任何研究人员发表有关此数据的研究成果时，都将严格遵循隐私保护原则，确保您的个人信息得到妥善保护。</p>
+        <p>为维护您的隐私，研究人员将在发表研究成果时注意保持匿名性。在同意以上条款的前提下，您可以开始使用聊天机器人进行交流。</p>
+        <p>感谢您的理解与支持！</p>
+        <button id="agreeBtn">同意</button>
+        <button id="disagreeBtn">不同意</button>
+    </div>
+</div>
+
+<script>
+    const overlay = document.getElementById('overlay');
+    const agreeBtn = document.getElementById('agreeBtn');
+    const disagreeBtn = document.getElementById('disagreeBtn');
+
+    agreeBtn.addEventListener('click', function() {
+        // 用户同意，进入页面
+        //overlay.style.display = 'none';
+        window.location.href = 'dialog.html';
+        // 在这里可以添加其他初始化页面的操作
+    });
+
+    disagreeBtn.addEventListener('click', function() {
+        // 用户不同意，跳转到提示页面
+        window.location.href = 'noservice.html';
+    });
+</script>
+
+</body>
+</html>

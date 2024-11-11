@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>骨质疏松预防智能小助手</title>
+</head>
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; height: 70vh; position: relative;">
+        <div style="width: 50%; padding: 20px; border-right: 1px solid #ccc; z-index: 1; background-color: white;">
+            <p style="font-size: 24px;">你好！我是你的骨质疏松预防小助手</p>
+            <br>
+            <p style="font-size: 20px;">我是一个帮助您了解骨量减少的聊天机器人.</p>
+            <br>
+            <p style="font-size: 20px;">请开始和我聊天吧!</p>
+        </div>
+        <div>
+          <link rel="stylesheet" href="script.css">
+          <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+          <df-messenger
+            location="us-central1"
+            project-id="chatproject-440622"
+            agent-id="35e11f6b-2158-45db-a1b0-d69b608d3d07"
+            language-code="zh-cn"
+            intent="Welcome">
+            <df-messenger-chat-bubble
+                chat-title="OP Bot Assistant"
+                allow-fullscreen="always"
+                expanded="true"
+                placeholder-text="input"
+            >
+            </df-messenger-chat-bubble>
+          </df-messenger>
+          <style>
+            df-messenger {
+              z-index: 999;
+              position: fixed;
+              bottom: 16px;
+              right: 16px;
+            }
+          </style>
+        </div>
+    </div>
+</body>
+</html>

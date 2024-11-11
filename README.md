@@ -1,2 +1,3 @@
-dialogflow chatbot for osteoporosis prevent 
+dialogflow chatbot for osteoporosis prevent                 
+just webpages        
 language: Chinese
